@@ -1,1 +1,29 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  /* Переменные для шрифтов */
+  --font-main: Inter-Variable;
+  --font-second: PressStart2P;
+  --font-alternative: fantasy;
+  --font_weight-text: 400;
+  --font_weight-title: 700;
+
+  /* Переменные для цвета текста и фона */
+  --themes-background: #fff;
+  --themes-main-color: #000;
+  --themes-background-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+
+    /* Переменные для контентной части */
+    --content-width: clamp(23.438rem, 16.373rem + 30.141vw, 43.5rem);
+    --dialog-width: clamp(21.563rem, 21.21rem + 1.502vw, 22.563rem); /* min - 345px, max - 361px */
+    --content_padding: 25px;
+    --footer-btn_width: clamp(19.375rem, 18.737rem + 2.723vw, 21.188rem); /*min - 310px, max - 339px */
+    --contour-color: var(--themes-main-color);
+    --sparks-color: red;
+}
