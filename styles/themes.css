@@ -23,6 +23,7 @@
   --font_weight-text: 465;
   --font_weight-title: 785;
 }
+
 :root.theme-light {
   /* Переменные для цвета текста и фона */
   --themes-background: #fff;
@@ -36,7 +37,65 @@
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 }
 
-.theme-light .container .button__text,
-.theme-light .container .button__icon {
+.theme-light .button__text,
+.theme-light .button__icon {
   color: var(--themes-background);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --themes-background: #fff;
+    --themes-main-color: #000;
+    --themes-bakground-image: repeating-linear-gradient(
+        to right,
+        #d3d3d3 0 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  }
+
+  .button__text,
+  .button__icon {
+    color: var(--themes-background);
+  }
+  .theme-dark .button__text,
+  .theme-dark .button__icon {
+    color: var(--themes-main-color);
+  }
+  .theme-dark .dialog__icon {
+    mix-blend-mode: normal;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --themes-background: #000;
+    --themes-main-color: #00cc14;
+    --themes-bakground-image: repeating-linear-gradient(
+        to right,
+        var(--themes-background) 0 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        var(--themes-background) 0 2px,
+        transparent 2px 4px
+      ),
+      linear-gradient(to bottom, #007f0c, #004306);
+    --font_weight-text: 465;
+    --font_weight-title: 785;
+  }
+
+  :root.theme-light {
+    --themes-background: #fff;
+    --themes-main-color: #000;
+    --themes-bakground-image: repeating-linear-gradient(
+        to right,
+        #d3d3d3 0 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  }
 }
