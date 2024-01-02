@@ -104,7 +104,7 @@
 .theme-menu__list {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 4px;
 }
@@ -230,6 +230,7 @@
   -webkit-padding-end: 2px;
   padding-inline-end: 2px;
   position: relative;
+  border-block: 2px solid var(--themes-main-color);
 }
 
 .card__image-img {
